@@ -1,0 +1,2 @@
+# myruby
+different ruby functions
