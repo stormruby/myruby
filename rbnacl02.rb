@@ -4,6 +4,7 @@ require "test/unit"
 extend Test::Unit::Assertions
 
 def concat_str(str1,str2)
+  raise "util: can not concat_str nil" if str1.nil? or str2.nil?
   # convert strings to arrays
   arr1 = str1.unpack("C*")
   arr2 = str2.unpack("C*")
