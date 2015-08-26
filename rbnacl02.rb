@@ -40,3 +40,16 @@ arr3 = ok3.unpack("C*")
 print_array(arr1); puts
 print_array(arr2); puts
 print_array(arr3)
+
+puts '---------------------'
+
+ok1 = 'a1'
+ok2 = 'b2'
+ok3 = concat_str(ok1,ok2)
+
+arr1 = ok1.unpack("C*")
+arr2 = ok2.unpack("C*")
+arr3 = ok3.unpack("C*")
+print_array(arr1); puts
+print_array(arr2); puts
+print_array(arr3)
