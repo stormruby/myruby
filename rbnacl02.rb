@@ -13,14 +13,6 @@ def concat_str(str1,str2)
   arr.pack("C*")
 end
 
-def b64enc(str)
-  Base64.strict_encode64 str
-end
-
-def b64dec(str)
-  Base64.strict_decode64 str
-end
-
 def rand_bytes(count)
   RbNaCl::Random.random_bytes(count)
 end
@@ -45,10 +37,6 @@ puts ok3.length; puts
 arr1 = ok1.unpack("C*")
 arr2 = ok2.unpack("C*")
 arr3 = ok3.unpack("C*")
-#arr1.each do |x|
-#  print x
-#end
-#puts
 print_array(arr1); puts
 print_array(arr2); puts
 print_array(arr3)
