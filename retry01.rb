@@ -7,6 +7,7 @@ def retry01(test1,test2)
       return
     else
       print 'count is not ', test1; puts
+      sleep 1
       fail
     end
   rescue
