@@ -4,7 +4,11 @@ end
 
 say_hi_to { "michael" }
 
-def call_block
+#
+# http://rubylearning.com/satishtalim/ruby_blocks.html
+#
+
+def call_block_a
   puts 'Start of method'
   # you can call the block using the yield keyword
   yield
@@ -13,4 +17,22 @@ def call_block
 end
 
 # Code blocks may appear only in the source adjacent to a method call
-call_block {puts 'In the block'}
+call_block_a {puts 'In the block'}
+
+def call_block_b
+  yield('hello', 99)
+end
+
+call_block_b {|str, num| puts str + ' ' + num.to_s}
+
+def try
+  if block_given?
+    yield
+  else
+    puts "no block"
+  end
+end
+
+try # => "no block"
+try { puts "hello" } # => "hello"
+try do puts "hello" end # => "hello"
